@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/blog/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/blog/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="web前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="HTTP协议特点http 协议的主要特点：简单快速、灵活、无连接、无状态。  简单快速：资源固定，统一资源标识符 URI，统一资源定位符URL 。  统一资源标志符 URI 就是在某一规则下能把一个资源独一无二地标识出来。如身份证号就是 URI，通过身份证号能让我们能且仅能确定一个人。  统一资源定位符 URL，URL是以描述资源的位置来唯一确定一个资源的，例如：动物住址协议://地球/中国/浙江">
+<meta name="keywords" content="web前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http">
+<meta property="og:url" content="http://riversword.github.io/blog/2019/05/03/web前端-http/index.html">
+<meta property="og:site_name" content="New Jean&#39;s blog">
+<meta property="og:description" content="HTTP协议特点http 协议的主要特点：简单快速、灵活、无连接、无状态。  简单快速：资源固定，统一资源标识符 URI，统一资源定位符URL 。  统一资源标志符 URI 就是在某一规则下能把一个资源独一无二地标识出来。如身份证号就是 URI，通过身份证号能让我们能且仅能确定一个人。  统一资源定位符 URL，URL是以描述资源的位置来唯一确定一个资源的，例如：动物住址协议://地球/中国/浙江">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-29T07:30:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="http">
+<meta name="twitter:description" content="HTTP协议特点http 协议的主要特点：简单快速、灵活、无连接、无状态。  简单快速：资源固定，统一资源标识符 URI，统一资源定位符URL 。  统一资源标志符 URI 就是在某一规则下能把一个资源独一无二地标识出来。如身份证号就是 URI，通过身份证号能让我们能且仅能确定一个人。  统一资源定位符 URL，URL是以描述资源的位置来唯一确定一个资源的，例如：动物住址协议://地球/中国/浙江">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://riversword.github.io/blog/2019/05/03/web前端-http/">
+
+
+
+
+
+  <title>http | New Jean's blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-141700744-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">New Jean's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://riversword.github.io/blog/blog/2019/05/03/web前端-http/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="New Jean">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="New Jean's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">http</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-03T22:32:13+08:00">
+                2019-05-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.2k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7分
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="HTTP协议特点"><a href="#HTTP协议特点" class="headerlink" title="HTTP协议特点"></a>HTTP协议特点</h3><p>http 协议的主要特点：简单快速、灵活、<strong>无连接</strong>、<strong>无状态</strong>。</p>
+<ul>
+<li><p>简单快速：资源固定，统一资源标识符 URI，统一资源定位符URL 。</p>
+<blockquote>
+<p>统一资源标志符 URI 就是在某一规则下能把一个资源独一无二地标识出来。如身份证号就是 URI，通过身份证号能让我们能且仅能确定一个人。 </p>
+<p>统一资源定位符 URL，URL是以描述资源的位置来唯一确定一个资源的，例如：动物住址协议://地球/中国/浙江省/杭州市/西湖区/某大学/14号宿舍楼/525号寝/张三.人 ，这个字符串同样标识出了唯一的一个人，起到了URI的作用，所以URL是URI的子集 。</p>
+</blockquote>
+</li>
+<li><p>灵活：在 http 协议头部有一个数据类型，通过一个 http 协议就可以实现不同数据类型的传输。</p>
+</li>
+<li><p>无连接：连接一次之后就会断掉，不会保持连接。</p>
+</li>
+<li><p>无状态：可理解为客户端和服务端是两种身份，客户端向服务端请求一个图片时，http 建立连接，中间传输，任务完成后，连接就会断开；下一次客户端再向服务端请求时，服务端没法区分上一次连接和这一次连接，是不是同一个人/同一个身份，因为服务端是不会记住状态的，单从 http 协议上是没法区分两次连接者的身份的。（目前网站中的记住身份，是通过服务端的其他方式做到的，不是通过 http 协议。）</p>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="HTTP-方法"><a href="#HTTP-方法" class="headerlink" title="HTTP 方法"></a>HTTP 方法</h3><p> HTTP1.0 定义了三种请求方法： GET, POST 和 HEAD方法。 HTTP/1.1 新增了五种请求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法。</p>
+<ul>
+<li><p>GET：获取资源；</p>
+</li>
+<li><p>POST：传输资源；</p>
+</li>
+<li><p>HEAD：获得报文头部；</p>
+</li>
+<li><p>PUT：更新资源；</p>
+</li>
+<li><p>DELETE：删除资源；</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">GET</td>
+<td style="text-align:left">请求指定的页面信息，并返回实体主体。</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">HEAD</td>
+<td style="text-align:left">类似于get请求，只不过返回的响应中没有具体的内容，用于获取报头</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">POST</td>
+<td style="text-align:left">向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">PUT</td>
+<td style="text-align:left">从客户端向服务器传送的数据取代指定的文档的内容。（更新资源）</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">DELETE</td>
+<td style="text-align:left">请求服务器删除指定的页面。</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">CONNECT</td>
+<td style="text-align:left">HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">OPTIONS</td>
+<td style="text-align:left">允许客户端查看服务器的性能。</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">TRACE</td>
+<td style="text-align:left">回显服务器收到的请求，主要用于测试或诊断。</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left">PATCH</td>
+<td style="text-align:left">实体中包含一个表，表中说明与该URI所表示的原内容的区别。</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">MOVE</td>
+<td style="text-align:left">请求服务器将指定的页面移至另一个网络地址。</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:left">COPY</td>
+<td style="text-align:left">请求服务器将指定的页面拷贝至另一个网络地址。</td>
+</tr>
+<tr>
+<td style="text-align:left">12</td>
+<td style="text-align:left">LINK</td>
+<td style="text-align:left">请求服务器建立链接关系。</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:left">UNLINK</td>
+<td style="text-align:left">断开链接关系。</td>
+</tr>
+<tr>
+<td style="text-align:left">14</td>
+<td style="text-align:left">WRAPPED</td>
+<td style="text-align:left">允许客户端发送经过封装的请求。</td>
+</tr>
+<tr>
+<td style="text-align:left">15</td>
+<td style="text-align:left">Extension-mothed</td>
+<td style="text-align:left">在不改动协议的前提下，可增加另外的方法。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HTTP-状态码"><a href="#HTTP-状态码" class="headerlink" title="HTTP 状态码"></a>HTTP 状态码</h3><p>HTTP 状态返回码用来表示指定的 HTTP 请求是否成功完成。响应被分为 5 种类型: 消息型响应，成功响应，重定向，客户端错误和服务器错误。</p>
+<ul>
+<li><p>1xx：指示信息，表示请求已接收，继续处理；</p>
+</li>
+<li><p>2xx：成功，表示请求已被成功接收；</p>
+</li>
+<li><p>3xx：重定向，要完成请求必须进行更进一步的操作；</p>
+</li>
+<li><p>4xx：客户端错误，请求有语法错误或请求无法实现；</p>
+</li>
+<li><p>5xx：服务器错误，服务器未能实现合法的请求；</p>
+</li>
+</ul>
+<blockquote>
+<p>例：</p>
+<p>200 OK ：客户端请求成功；</p>
+<p>206 Partial Content：客户发送了一个带有Range（范围）头的GET请求，服务器完成了它；服务器会截取Range指定的一部分内容返回给客户端。如，video标签请求一个视频或音频地址。</p>
+<p>301 Moved Permanently：所请求的页面已经转移至新的url；</p>
+<p>302 Found：所请求的页面已经临时转移至新的url；</p>
+<p>304 Not Modified：客户端有缓冲的文档并发出了一个条件性的请求，服务器告诉客户端，原来缓冲的文档还可以继续使用；</p>
+<p>400 Bad Request：客户端请求有语法错误，不能被服务器所理解；</p>
+<p>401 Unauthorized：请求未经授权，这个状态码必须和 WWW-Authenticate 报头域一起使用；</p>
+<p>403 Forbidden：对被请求页面的访问被禁止；</p>
+<p>404 Not Found：请求资源不存在；</p>
+<p>500 Internal Server Error：服务器发生不可预期的错误原来缓冲的文档还可以继续使用；</p>
+<p>503 Server Unavailable：请求未完成，服务器临时过载或宕机，一段时间后可能恢复正常；</p>
+</blockquote>
+<h3 id="HTTP-报文"><a href="#HTTP-报文" class="headerlink" title="HTTP 报文"></a>HTTP 报文</h3><p>http 报文的组成部分：</p>
+<ul>
+<li><p>请求报文：</p>
+<ul>
+<li>请求行，请求行又包括http方法、页面地址、http协议及版本；</li>
+<li>请求头，请求头是key、value值的格式，来告诉服务端我要什么内容、什么类型；</li>
+<li>空行，用来让服务端识别，空行以上为请求头，空行以下为请求体；</li>
+<li>请求体；</li>
+</ul>
+</li>
+<li><p>响应报文：状态行，响应头，空行，响应体；</p>
+</li>
+</ul>
+<h3 id="post-和-get-的区别"><a href="#post-和-get-的区别" class="headerlink" title="post 和 get 的区别"></a>post 和 get 的区别</h3><p><strong>GET 在浏览器回退时是无害的，而 POST 会再次提交请求；</strong></p>
+<p>GET 产生的 URL 地址可以被收藏，而 POST 不会；</p>
+<p><strong>GET 请求会被浏览器主动缓存，而 POST 不会，除非手动设置；</strong></p>
+<p>GET 请求只能进行 url 编码，而 POST 支持多种编码方法；</p>
+<p><strong>GET 请求参数会被完整保留在浏览器历史记录里面，而 POST 中的参数不会被保留；</strong>（为了防止 csrf 攻击，许多公司将 GET 请求统一改为 POST 请求。）</p>
+<p><strong>GET 请求在 URL 中传送的参数是有长度限制的</strong>（一般为2kb，各浏览器有所不同。需要注意的是，使用 get 请求时，拼接的url不要太长，否则会被浏览器截断，因为http对url的长度有限制），<strong>而 POST 没有限制；</strong></p>
+<p>对参数的数据类型，GET 只接受 ASCII 字符，而 POST 没有限制；</p>
+<p>GET 比 POST 更不安全，因为参数直接暴露在 URL上，所有不能用来传递敏感信息。</p>
+<p><strong>GET 参数通过 URL传递，POST放在 Request body 中。</strong></p>
+<h3 id="持久连接"><a href="#持久连接" class="headerlink" title="持久连接"></a>持久连接</h3><p>什么是持久连接：</p>
+<p>HTTP 协议采用“请求-应答”模式，当使用普通模式，即非 Keep-Alive 模式时，每个请求/应答，客户端和服务器都要新建一个连接，完成之后立即断开连接（HTTP协议为无连接的协议）</p>
+<p>当使用 Keep-Alive 模式（又称持久连接、连接重用）时，Keep-Alive 功能使客户端到服务端的连接持续有效，当出现对服务器的后继请求时，Keep-Alive 功能避免了建立或者重新建立连接。（http 1.1版本才支持持久连接）</p>
+<h3 id="管线化"><a href="#管线化" class="headerlink" title="管线化"></a>管线化</h3><p>什么是管线化：</p>
+<p>在使用持久连接的情况下，某个连接上的消息的传递类似于： 请求1 -&gt; 响应1 -&gt; 请求2 -&gt; 响应2 -&gt; 请求3 -&gt; 响应3</p>
+<p>管线化是指在某个持久连接上的消息变成了类似这样： 请求1 -&gt;请求2 -&gt;  请求3 -&gt; 响应1 -&gt; 响应2 -&gt; 响应3</p>
+<h4 id="管线化的特点"><a href="#管线化的特点" class="headerlink" title="管线化的特点"></a>管线化的特点</h4><ul>
+<li>管线化机制通过持久连接完成，仅 HTTP/1.1 支持此技术；</li>
+<li>只有 GET 和 HEAD 请求可以进行管线化，而 POST 则有所限制；</li>
+<li>初次创建连接时不应启动管线化机制，因为对方（服务器）不一定支持 HTTP/1.1 版本的协议；</li>
+<li>管线化不会影响响应到来的顺序，如上面的例子所示，响应的顺序并未改变；</li>
+<li>HTTP/1.1 要求服务器端支持管线化，但不要求服务器端也对响应进行管线化处理，只是要求对于管线化的请求不失败即可；</li>
+<li>由于上面提到的服务器问题，开启管线化很可能并不会带来大幅的性能提升，而且很多服务器端和代理程序对管线化的支持并不好，因此现代浏览器如 chrome 和 firefox 默认并未开启管线化支持；</li>
+</ul>
+<hr>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/HTTP</a></p>
+<p><a href="http://tools.jb51.net/table/http_request_method/" target="_blank" rel="noopener">http://tools.jb51.net/table/http_request_method/</a></p>
+<p><a href="https://juejin.im/post/5d0de954e51d4556be5b3a6f" target="_blank" rel="noopener">https://juejin.im/post/5d0de954e51d4556be5b3a6f</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center; ">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://github.com/riversword/images/raw/master/blog/wechatimg.jpg" alt="New Jean 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://github.com/riversword/images/raw/master/blog/alipayimg.jpg" alt="New Jean 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/web前端/" rel="tag"><i class="fa fa-tag"></i> web前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/05/03/web前端-安全/" rel="next" title="安全">
+                <i class="fa fa-chevron-left"></i> 安全
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/05/04/js-发布订阅模式/" rel="prev" title="发布订阅模式">
+                发布订阅模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjM4MC84OTQx"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/images/avatar.jpg" alt="New Jean">
+            
+              <p class="site-author-name" itemprop="name">New Jean</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">65</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                  
+                
+                  <span class="links-of-author-item">
+                    <a href="http://riverjean.com" target="_blank" title="个人主页">
+                      
+                        <i class="fa fa-fw fa-globe"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/riversword" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:newjean@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP协议特点"><span class="nav-number">1.</span> <span class="nav-text">HTTP协议特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-方法"><span class="nav-number">2.</span> <span class="nav-text">HTTP 方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-状态码"><span class="nav-number">3.</span> <span class="nav-text">HTTP 状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-报文"><span class="nav-number">4.</span> <span class="nav-text">HTTP 报文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#post-和-get-的区别"><span class="nav-number">5.</span> <span class="nav-text">post 和 get 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#持久连接"><span class="nav-number">6.</span> <span class="nav-text">持久连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管线化"><span class="nav-number">7.</span> <span class="nav-text">管线化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#管线化的特点"><span class="nav-number">7.1.</span> <span class="nav-text">管线化的特点</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">New Jean</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">63.5k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/blog/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+
+  <script type="text/javascript">
+  //lj全屏
+  /*$(document).on("click",".links-of-author-item:first",function(){
+
+    document.fullscreenElement
+        ||document.mozFullScreenElement
+        ||document.webkitFullscreenElement
+        ||document.msFullscreenElement
+        ?document.exitFullscreen
+        ?document.exitFullscreen()
+        :document.msExitFullscreen
+        ?document.msExitFullscreen()
+        :document.mozCancelFullScreen
+        ?document.mozCancelFullScreen()
+        :document.webkitExitFullscreen
+        &&document.webkitExitFullscreen()
+        :document.documentElement.requestFullscreen
+        ?document.documentElement.requestFullscreen()
+        :document.documentElement.msRequestFullscreen
+        ?document.documentElement.msRequestFullscreen()
+        :document.documentElement.mozRequestFullScreen
+        ?document.documentElement.mozRequestFullScreen()
+        :document.documentElement.webkitRequestFullscreen
+        &&document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)
+  });*/
+  </script>
+</body>
+</html>
